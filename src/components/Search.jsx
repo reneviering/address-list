@@ -3,6 +3,8 @@ import React from 'react';
 function Search ({ searchTerm, onSearchTermChange }) {
 
   const handleChange = event => {
+    if (!onSearchTermChange) return;
+
     onSearchTermChange(event.target.value);
   };
 
@@ -17,6 +19,10 @@ function Search ({ searchTerm, onSearchTermChange }) {
       />
     </label>
   );
+}
+
+Search.defaultProps = {
+  searchTerm: ''
 }
 
 export default Search;
