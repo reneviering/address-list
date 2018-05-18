@@ -3,7 +3,7 @@ import React from 'react';
 function Search ({ searchTerm, onSearchTermChange }) {
 
   const handleChange = event => {
-    if (!onSearchTermChange) return;
+    if (typeof onSearchTermChange !== function) return;
 
     onSearchTermChange(event.target.value);
   };
