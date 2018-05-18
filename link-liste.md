@@ -8,3 +8,4 @@
 - https://github.com/enaqx/awesome-react
 
 - https://stackoverflow.com/questions/35351353/missing-visible-and-hidden-in-bootstrap-v4
+- https://github.com/facebook/create-react-app
