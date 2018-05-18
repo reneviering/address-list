@@ -1,24 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  HashRouter as Router,
+  Route,
+  Redirect,
+  Switch
+} from 'react-router-dom';
 
-import FilterableAddressList from './components/FilterableAddressList';
+import AddressListContainer from './containers/AddressListContainer';
+import About from './components/About';
 
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    ReactDOM.render(
-      <FilterableAddressList addresses={ data } />,
-      document.getElementById('root')
-    );
-  });
-
-/*
-- Ursprungsdaten
-- Suchtext => STATE
-- gefilterte Liste
-
-- Werden Daten über Props übergeben? => kein State
-- Lassen sich die Daten auf Grundlage von anderen DAten berechnen? => kein State
-- Sind DAten unveränderlich? => kein State
-
-*/
+ReactDOM.render(
+  <Router>
+    <Switch>
+      <Redirect from="/" to="/list" exact />
+      <Route path="/list" component={ AddressListContainer } />
+      <Route path="/about" component={ About } />
+      <Route component={ () => <div>404!</div> } />
+    </Switch>
+  </Router>,
+  document.getElementById('root')
+);
