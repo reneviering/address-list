@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import FilterableAddressList from './components/FilterableAddressList';
 
-fetch('http://localhost:3000/data.json')
+fetch('data.json')
   .then(response => response.json())
   .then(data => {
     ReactDOM.render(
