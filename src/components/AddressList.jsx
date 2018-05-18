@@ -1,5 +1,9 @@
 import React from 'react';
 
+import {
+  Table
+} from 'reactstrap';
+
 import AddressListItem from './AddressListItem';
 
 function AddressList ({ addresses, searchTerm }) {
@@ -10,9 +14,22 @@ function AddressList ({ addresses, searchTerm }) {
     });
 
   return (
-    <ul>
-      { addressListItems }
-    </ul>
+    <Table>
+
+      <thead>
+        <tr>
+          <th>Vorname</th>
+          <th>Nachname</th>
+          <th>E-Mail</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        { addressListItems }
+      </tbody>
+
+    </Table>
   );
 }
 

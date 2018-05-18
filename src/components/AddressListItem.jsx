@@ -2,7 +2,12 @@ import React from 'react';
 
 function AddressListItem ({ address }) {
   return (
-    <li>{ `${address.firstName} ${address.lastName}` }</li>
+    <tr>
+      <td>{ address.firstName }</td>
+      <td>{ address.lastName }</td>
+      <td>{ address.email }</td>
+      <td>[ACTIONS…]</td>
+    </tr>
   );
 }
 
