@@ -7,6 +7,8 @@ import {
   Switch
 } from 'react-router-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import AddressListContainer from './containers/AddressListContainer';
 import About from './components/About';
 
