@@ -13,7 +13,7 @@ function Search ({ searchTerm, onSearchTermChange }) {
       Search:
       <input
         type="text"
-        value={ searchTerm }
+        value={ searchTerm.toLowerCase() }
         placeholder="Search…"
         onChange={ handleChange }
       />
