@@ -1,0 +1,26 @@
+{
+  "name": "adress-verwaltung",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.1.1",
+    "lodash.debounce": "4.0.8",
+    "lunr": "2.2.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-popper": "0.10.4",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "2.3.0",
+    "reactstrap": "6.0.1",
+    "redux": "4.0.0",
+    "redux-thunk": "2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

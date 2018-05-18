@@ -1,0 +1,7 @@
+.address-row {
+  cursor: pointer;
+}
+
+.address-row:hover {
+  background-color: #ecf0f1;
+}
