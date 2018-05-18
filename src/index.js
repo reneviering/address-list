@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Redirect,
   Switch
@@ -12,14 +12,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AddressListContainer from './containers/AddressListContainer';
 import About from './components/About';
 
+import Navigation from './components/Navigation';
+
 ReactDOM.render(
   <Router>
-    <Switch>
-      <Redirect from="/" to="/list" exact />
-      <Route path="/list" component={ AddressListContainer } />
-      <Route path="/about" component={ About } />
-      <Route component={ () => <div>404!</div> } />
-    </Switch>
+    <React.Fragment>
+      <Navigation />
+      <Switch>
+        <Redirect from="/" to="/list" exact />
+        <Route path="/list" component={ AddressListContainer } />
+        <Route path="/about" component={ About } />
+        <Route component={ () => <div>404!</div> } />
+      </Switch>
+    </React.Fragment>
   </Router>,
   document.getElementById('root')
 );
